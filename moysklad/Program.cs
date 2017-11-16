@@ -12,12 +12,8 @@ namespace moysklad
 {
     class Program
     {
-        const string LOGIN = "admin@tigratius927";
-        const string PASSWORD = "ffc0e73e0d";
-
-        //        const string LOGIN = "admin@dilatte";
-        //        const string PASSWORD = "i20n9d1box";
-
+        const string LOGIN = "";
+        const string PASSWORD = "";
 
         static void Main(string[] args)
         {
@@ -407,8 +403,7 @@ namespace moysklad
 
                 using (var webClient = new WebClient())
                 {
-                    webClient.Credentials = new NetworkCredential("admin@dilatte", "i20n9d1box");
-//                    webClient.Credentials = new NetworkCredential("admin@tigratius927", "ffc0e73e0d");
+                    webClient.Credentials = new NetworkCredential(LOGIN, PASSWORD);
                     webClient.Encoding = Encoding.UTF8;
                     webClient.Headers.Add(HttpRequestHeader.ContentType, "application/json");
                     string HtmlResult = webClient.DownloadString(url);
